@@ -1,0 +1,17 @@
+body{
+    background: beige;
+    text-align: center;
+    background: url('https://data.whicdn.com/images/304123601/original.gif');
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 28px;
+}
+button {
+    color: white;
+    font-size: 30px;
+    background: url('https://gray-kwqc-prod.cdn.arcpublishing.com/resizer/RLWZBHxBJ0kGTN2Ftp8gWe2KyzU=/1200x675/smart/cloudfront-us-east-1.images.arcpublishing.com/gray/2XD2PZRDY5IF5I3WVJD2TSVNJM.jpg');
+    border-radius: 8px;
+    margin: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
