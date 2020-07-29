@@ -1,13 +1,19 @@
-let wordBank = ['SKATE', 'PIANO', 'MAGIC', 'FLOWER', 'SWITCH', 'PERSON','FASTING', 'SOLDIER', 'HUSBAND'];
+let wordBank = ['SKATE', 'PIANO', 'MAGIC', 'FLOWER', 'SWITCH', 'PERSON', 'FASTING', 'SOLDIER', 'HUSBAND', 'BETRAYAL'];
 let answer = '';
 let wrong = 0;
 let guessed = [];
 let lives = 7;
 let randoWord = null;
 
+function startGame() {
+    document.getElementById('mainMenu').style.display= 'none';
+    document.getElementById('mainGame').style.display= 'inline';
+};
+
+document.getElementById('mGame').addEventListener('click', startGame)
+
 function randomWord() {
     answer = wordBank[Math.floor(Math.random() * wordBank.length)];
-    console.log(answer);
 };
 
 function generateButtonClickEvents(){
@@ -57,11 +63,12 @@ function checkWin() {
 
 function checkLoss() {
     if(wrong === lives)
-    document.getElementById('keys').innerHTML = 'Looks like that guy is gonna be hanging there for a while<br>-Noah Eror, 2020'
+    document.getElementById('keys').innerHTML = 'You just got nerfed!'
 }
 
 function damage() {
     document.getElementById('wrongGuess').innerHTML = wrong;
+    replaceHangmanPic();
 };
 
 function currentWord() {
@@ -76,12 +83,46 @@ document.getElementById('reset').addEventListener('click', function(){
     buttonMenu();
     damage();
     currentWord();
+    replaceHangmanPic();
 });
 
-
+function replaceHangmanPic() {
+    if(wrong === 0) {
+        document.getElementById('hangpic2').style.display = 'none';
+        document.getElementById('hangpic3').style.display = 'none';
+        document.getElementById('hangpic4').style.display = 'none';
+        document.getElementById('hangpic5').style.display = 'none';
+        document.getElementById('hangpic6').style.display = 'none';
+        document.getElementById('hangpic7').style.display = 'none';
+        document.getElementById('hangpic8').style.display = 'none';
+        document.getElementById('hangpic1').style.display = 'inline';
+    } else if(wrong === 1) {
+        document.getElementById('hangpic1').style.display = 'none';
+        document.getElementById('hangpic2').style.display = 'inline';
+    } else if(wrong === 2) {
+        document.getElementById('hangpic2').style.display = 'none';
+        document.getElementById('hangpic3').style.display = 'inline';
+    } else if(wrong === 3) {
+        document.getElementById('hangpic3').style.display = 'none';
+        document.getElementById('hangpic4').style.display = 'inline';
+    } else if(wrong === 4) {
+        document.getElementById('hangpic4').style.display = 'none';
+        document.getElementById('hangpic5').style.display = 'inline';
+    } else if(wrong === 5) {
+        document.getElementById('hangpic5').style.display = 'none';
+        document.getElementById('hangpic6').style.display = 'inline';
+    } else if(wrong === 6) {
+        document.getElementById('hangpic6').style.display = 'none';
+        document.getElementById('hangpic7').style.display = 'inline';
+    } else if(wrong === 7) {
+        document.getElementById('hangpic7').style.display = 'none';
+        document.getElementById('hangpic8').style.display = 'inline';
+    }
+};
 
 document.getElementById('lifeTotal').innerHTML = lives;
+
 randomWord();
 buttonMenu();
 currentWord();
-
+replaceHangmanPic();

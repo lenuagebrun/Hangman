@@ -8,16 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container"></div>
-<h3>The Hangman Game</h3>
-<div>Wrong Guesses: <span id= 'wrongGuess'>0</span>/<span id= 'lifeTotal'></span></div>
-<div>
-    <img>
-    <p>Guess the random word</p>
-    <p id= 'field'></p>
-    <div id= 'keys'></div>
-    <button id= 'reset'>Reset the game</button>
+<div id= 'mainMenu'>
+    <h1>Welcome to The Hangman Game, child</h1>
+    <button id= 'mGame'>Face your fate</button>
 </div>
+<div id= 'mainGame'>
+    <div class="container"></div>
+    <h3>The Hangman Game</h3>
+    <div>Wrong Guesses: <span id= 'wrongGuess'>0</span>/<span id= 'lifeTotal'></span></div>
+    <div>
+        <img id= 'hangpic1' src = 'https://i.imgur.com/taDXIcU.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic2' src = 'https://i.imgur.com/wUBLCDJ.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic3' src = 'https://i.imgur.com/2dckbxq.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic4' src = 'https://i.imgur.com/Vugar0C.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic5' src = 'https://i.imgur.com/eAVjTDX.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic6' src = 'https://i.imgur.com/cwgEf7I.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic7' src = 'https://i.imgur.com/WeUV0Dn.png' style ='display:none'></p>
+        <img class= 'hangpics' id= 'hangpic8' src = 'https://i.imgur.com/Mr1ZJgK.png' style ='display:none'></p>
+        <p>Guess the random word</p>
+        <p id= 'field'></p>
+        <div id= 'keys'></div>
+        <button id= 'reset'>Reset the game</button></br>
+        <a id= 'link' href='https://www.youtube.com/watch?v=Tga8F0daqb4' target='_blank'>Link to the video</a>
+    </div>
+</div>
+<audio id='music' controls autoplay src='https://freesound.org/data/previews/460/460358_8462944-lq.mp3' loop></audio>
 <script defer src= 'js/main.js'></script>
 </body>
 </html>
