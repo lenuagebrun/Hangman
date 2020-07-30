@@ -5,6 +5,7 @@ This is a reincarnated classic of the hangman game that you can play from your b
 2. CSS 3.0
 3. Javascript
 # Link to the game
+https://lenuagebrun/github.io/hangman
 https://hangman-game--lenuagebrun.repl.co/
 
 # Planned future enhancements
