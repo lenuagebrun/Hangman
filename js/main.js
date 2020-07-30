@@ -1,4 +1,4 @@
-let wordBank = ['SKATE', 'PIANO', 'MAGIC', 'FLOWER', 'SWITCH', 'PERSON', 'FASTING', 'SOLDIER', 'HUSBAND', 'BETRAYAL'];
+let wordBank = ['FLOWER', 'SWITCH', 'PERSON', 'FASTING', 'SOLDIER', 'HUSBAND', 'BETRAYAL'];
 let answer = '';
 let wrong = 0;
 let guessed = [];
@@ -10,7 +10,31 @@ function startGame() {
     document.getElementById('mainGame').style.display= 'inline';
 };
 
-document.getElementById('mGame').addEventListener('click', startGame)
+document.getElementById('mGame').addEventListener('click', startGame);
+
+document.getElementById('blind').addEventListener('click', function(){
+    document.querySelector('body').style.filter = 'invert(1)';
+    document.getElementById('blind').style.display = 'none';
+    document.getElementById('default').style.display = 'inline';
+});
+
+document.getElementById('default').addEventListener('click', function(){
+    document.querySelector('body').style.filter = 'invert(0)';
+    document.getElementById('default').style.display = 'none';
+    document.getElementById('blind').style.display = 'inline';
+});
+
+document.getElementById('blindGame').addEventListener('click', function(){
+    document.querySelector('body').style.filter = 'invert(1)';
+    document.getElementById('blindGame').style.display = 'none';
+    document.getElementById('defaultGame').style.display = 'inline';
+});
+
+document.getElementById('defaultGame').addEventListener('click', function(){
+    document.querySelector('body').style.filter = 'invert(0)';
+    document.getElementById('defaultGame').style.display = 'none';
+    document.getElementById('blindGame').style.display = 'inline';
+});
 
 function randomWord() {
     answer = wordBank[Math.floor(Math.random() * wordBank.length)];
