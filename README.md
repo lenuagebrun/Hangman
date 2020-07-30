@@ -9,7 +9,7 @@ https://hangman-game--lenuagebrun.repl.co/
 
 # Planned future enhancements
 Online Multiplayer:
-Featuring free content updates and a Battle Royale Mode
+Featuring free content updates and matchmaking
 
 3D Models:
 Wanting to introduce a 3D model of the hanged man into the game
