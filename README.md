@@ -17,3 +17,6 @@ Wanting to introduce a 3D model of the hanged man into the game
 Leaderboards:
 The Hangman Game is loved by the speedrunning community and we want to introduce a good 
 in-game timer to help speedrunners with their times and a way to upload their incredible score on the website itself
+
+VR:
+VR coming soon!!!!! featuring Hatsune Miku
