@@ -54,17 +54,7 @@ function buttonMenu() {
     document.getElementById('keys').innerHTML = buttonBoard;
     generateButtonClickEvents();
 };
-function clickGuess(event) {
-    const clickedLetter = event.target.id;
-    guessed.indexOf(clickedLetter) === -1 ? guessed.push(clickedLetter): null;
-    document.getElementById(clickedLetter).setAttribute('disabled', true);
-    if (answer.indexOf(clickedLetter) === 0) {
-        currentWord();
-    }else if (answer.indexOf(clickedLetter) === -1) {
-        wrong++;
-        damage();
-    }
-};
+
 function clickGuess(event) {
     clickedLetter = event.target.id
     guessed.indexOf(clickedLetter) === -1 ? guessed.push(clickedLetter): null;
